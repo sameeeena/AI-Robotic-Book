@@ -1,55 +1,50 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+Version change:  → 1.0.0
+List of modified principles: (All new)
+Added sections: All
+Removed sections: None
+Templates requiring updates:
+  - .specify/templates/plan-template.md: ⚠ pending
+  - .specify/templates/spec-template.md: ⚠ pending
+  - .specify/templates/tasks-template.md: ⚠ pending
+  - .specify/templates/commands/*.md: ⚠ pending
+  - README.md: ⚠ pending
+  - docs/quickstart.md: ⚠ pending
+Follow-up TODOs: None
+-->
+# Physical AI and Humanoid Robots Book Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Tone & Style
+All content must be beginner-friendly, providing clear and simple explanations. Complex mathematical concepts are to be avoided unless absolutely necessary, and always explained thoroughly with analogies where helpful. The writing should use clean formatting, short paragraphs, and strictly avoid unnecessary jargon.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Structure
+The book will consist of 6–8 chapters. Each chapter must include: an overview, key concepts, illustrations/diagrams (ASCII or described), simple examples, an FAQ section, and a quick summary.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Technical Depth
+The book must maintain beginner-friendliness while ensuring technical accuracy. It will cover: the definition and characteristics of humanoid robots; detailed explanations of sensors, motors, balance, and movement mechanisms; fundamentals of Physical AI; simple AI concepts such as vision, speech, and control loops; and practical robotics coding examples presented exclusively in pseudo-code.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Visual & Diagram Rules
+Diagrams and illustrations will be provided using ASCII art or descriptive text. They must be kept simple and clear, and under no circumstances will copyrighted diagrams or images be used.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Ethical Rules
+All content must adhere to strict ethical guidelines, explicitly prohibiting dangerous robotics instructions, any content promoting harm, biological applications, weaponized use, or unsafe practices. The sole purpose of the book is educational.
 
-### [PRINCIPLE_6_NAME]
+### VI. Formatting Rules
+Content will be consistently formatted using markdown headers, lists, and tables where appropriate. Pseudo-code examples will always be enclosed within code blocks.
 
+### VII. Consistency Rules
+A consistent writing style must be maintained throughout the entire book. Terminology will be used uniformly, and all new terms will be clearly clarified upon their first use.
 
-[PRINCIPLE__DESCRIPTION]
+### VIII. Content Boundaries
+The book must NOT include advanced robotics engineering, detailed electrical wiring schematics, dangerous mechanical instructions, or any confidential/proprietary information.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### IX. Final Guarantee
+Claude Code is guaranteed to adhere to this constitution for all aspects of content generation, including writing book chapters, adding diagrams, generating examples, creating summaries, and ensuring overall educational clarity.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other writing practices for the "Physical AI and Humanoid Robots" book. Amendments require a documented change, approval, and a plan for migration or consistency updates across all generated content. All content generation and reviews must verify compliance with these principles.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-06 | **Last Amended**: 2025-12-06
