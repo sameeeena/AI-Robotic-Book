@@ -114,6 +114,7 @@ For each chapter (e.g., `chapter-N.md`):
 - **Details**: Options could include "English", "Spanish", etc. This will be passed to the RAG backend for potential translation or language-specific retrieval.
 
 ### 4.6 Fetch from Backend
+
 - **Action**: Integrate the chatbot frontend with the RAG backend.
 - **Details**: Use `fetch` or `axios` to send user queries to the `/query` endpoint and display the responses.
 
@@ -160,6 +161,3 @@ For each chapter (e.g., `chapter-N.md`):
 - **Action**: If multi-language support is implemented, test chapter content and chatbot responses in different languages.
 - **Details**: Ensure all translated content is accurate and culturally appropriate.
 
-### 6.5 Test Deployment
-- **Action**: Verify both the frontend (GitHub Pages) and backend (Vercel/Render) are accessible and functional.
-- **Details**: Check all links, images, and API calls are working correctly in the deployed environment.

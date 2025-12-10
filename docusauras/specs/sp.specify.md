@@ -193,15 +193,8 @@ A user wants to log in to access personalized features or restricted content.
   - Chapter 6: Simple Programs for Humanoids
   - Chapter 7: Real-World Applications
   - Chapter 8: Future of Physical AI
-- The project will have the following folder structure:
-  - /docs — all chapters
-  - /src/pages — custom UI pages B
-  - /static/img — diagrams
-  - docusaurus.config.js
-  - sidebars.js
-- The deployment requirements are:
-  - Configure GitHub Pages branch → gh-pages
-  - Add:
+
+
 
   # Feature Specification: Deployment and Final Testing
 
