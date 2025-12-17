@@ -95,11 +95,11 @@ const config = {
             position: 'left',
             label: 'Chapters',
           },
-          {
-            to: '/chat',
-            label: 'Chat',
-            position: 'left',
-          },
+          // {
+          //   to: '/chat',
+          //   label: 'Chat',
+          //   position: 'left',
+          // },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
@@ -116,7 +116,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/module-1-robotic-nervous-system/chapter-1-introduction-to-the-robotic-nervous-system',
               },
             ],
           },
