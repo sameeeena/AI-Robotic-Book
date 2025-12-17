@@ -9,7 +9,7 @@
 Include ALL specifications clearly.
 
 ## 1. Project Goals
-- Write a beginner-friendly book (6–8 chapters)
+<!-- - Write a beginner-friendly book (6–8 chapters) -->
 - Build using *Docusaurus v3*
 - Deploy to *GitHub Pages*
 
@@ -184,7 +184,7 @@ A user wants to log in to access personalized features or restricted content.
     - User-selected difficulty
     - Save reading progress
     - Personalized summaries
-- The book will have the following structure:
+<!-- - The book will have the following structure:
   - Chapter 1: Introduction to Humanoid Robots
   - Chapter 2: Understanding Physical AI
   - Chapter 3: Sensors & Actuators
@@ -192,7 +192,44 @@ A user wants to log in to access personalized features or restricted content.
   - Chapter 5: AI for Vision & Speech
   - Chapter 6: Simple Programs for Humanoids
   - Chapter 7: Real-World Applications
-  - Chapter 8: Future of Physical AI
+  - Chapter 8: Future of Physical AI -->
+Constraints:
+- The book has exactly 4 modules.
+- Each module has exactly 4 chapters (16 chapters total).
+- Content must be clearly structured module-wise.
+- Do NOT invent new chapters.
+- Do NOT modify implementation, chatbot, or database sections.
+- Use clean, professional markdown.
+
+Input (use exactly this structure):
+
+Module 1: <robotic-nervous-system>
+Chapters:
+1. <1-introduction-to-the-robotic-nervous-system>
+2. <2-ros-2-nodes-topics-and-services>
+3. <3-bridging-ai-agents-with-ros-using-rclpy>
+4. <4-humanoid-modeling-with-urdf>
+
+Module 2: <digital-twin>
+Chapters:
+5. chapter-5-digital-twins-in-physical-ai
+6. ...chapter-6-physics-simulation-in-gazebo
+7. ...chapter-7-human-robot-interaction-in-unity
+8. ...chapter-8-sensor-simulation-for-humanoid-robots
+
+Module 3: <ai-robot-brain>
+Chapters:
+9. ...chapter-9-the-ai-robot-brain
+10. ...chapter-10-nvidia-isaac-sim-and-synthetic-data
+11. ...chapter-11-isaac-ros-and-hardware-accelerated-vslam
+12. ...chapter-12-nav2-for-bipedal-humanoid-navigation
+
+Module 4: <vla>
+Chapters:
+13. ...chapter-13-vision-language-action-systems-in-physical-ai
+14. ...chapter-14-voice-to-action-using-openai-whisper
+15. ...chapter-15-cognitive-planning-with-large-language-models
+16. ...chapter-16-capstone-the-autonomous-humanoid
 
 
 

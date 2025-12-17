@@ -1,0 +1,113 @@
+/* docusauras/src/components/Chatbot/styles.module.css */
+
+.chatbotContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  height: 500px; /* Fixed height for the chat window */
+  border: 1px solid var(--ifm-color-gray-300);
+  border-radius: var(--ifm-border-radius);
+  overflow: hidden;
+  font-family: var(--ifm-font-family-base);
+  background-color: var(--ifm-background-color);
+  margin: 20px auto; /* Center the chatbot */
+  box-shadow: var(--ifm-shadow-md);
+}
+
+.messagesContainer {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background-color: var(--ifm-background-color);
+  border-bottom: 1px solid var(--ifm-color-gray-200);
+}
+
+.message {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 18px;
+  max-width: 80%;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.user {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  align-self: flex-end;
+  margin-left: auto; /* Push user messages to the right */
+  border-bottom-right-radius: 4px;
+}
+
+.bot {
+  background-color: var(--ifm-color-gray-100);
+  color: var(--ifm-font-color-base);
+  align-self: flex-start;
+  margin-right: auto; /* Push bot messages to the left */
+  border-bottom-left-radius: 4px;
+}
+
+.inputContainer {
+  display: flex;
+  padding: 10px 15px;
+  border-top: 1px solid var(--ifm-color-gray-200);
+  background-color: var(--ifm-background-color);
+}
+
+.messageInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid var(--ifm-color-gray-300);
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.messageInput:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}
+
+.sendButton {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.sendButton:hover:not(:disabled) {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.sendButton:disabled {
+  background-color: var(--ifm-color-gray-400);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Loading dots animation */
+.loadingDot {
+  animation: blink 1s infinite;
+  display: inline-block;
+  margin: 0 1px;
+}
+
+.loadingDot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loadingDot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}

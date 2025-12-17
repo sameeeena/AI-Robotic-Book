@@ -61,12 +61,12 @@ For each chapter (e.g., `chapter-N.md`):
 - **Action**: Initialize the main entry point for the RAG backend.
 - **Details**: Create the file `rag-backend/index.js`.
 
-### 3.2 Add Express
-- **Action**: Set up an Express.js server to handle API requests.
-- **Details**: `npm install express` and configure basic server boilerplate.
+### 3.2 Add Fastapi
+- **Action**: Set up an Fastapi server to handle API requests.
+- **Details**: `npm install fastapi` and configure basic server boilerplate.
 
 ### 3.3 Add OpenAI + embeddings
-- **Action**: Integrate OpenAI API for generating embeddings.
+- **Action**: Integrate openai API for generating embeddings.
 - **Details**: `npm install openai` and configure client with API key. Implement functions to take text input and return embedding vectors.
 
 ### 3.4 Add Qdrant Client
@@ -86,11 +86,8 @@ For each chapter (e.g., `chapter-N.md`):
     - **Method**: `POST /query`
     - **Input**: JSON payload with `user_query` and `difficulty`, `language` filters.
     - **Process**: Generate embedding for `user_query`, query Qdrant for similar vectors, retrieve original text segments, and potentially use OpenAI for generating a natural language response.
-
-### 3.7 Export Routes
-- **Action**: Export all defined API routes from `rag-backend/index.js`.
-- **Details**: Ensure the Express app uses these routes.
-
+---------------remaining-----------
+### 3.7 
 ## 4. Chatbot Page Implementation
 
 ### 4.1 Create /src/pages/chat.js

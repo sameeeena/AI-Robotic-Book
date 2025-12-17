@@ -1,89 +1,148 @@
+/* docusauras/src/pages/home.module.css */
+
+/* --- Hero Section --- */
 .hero {
-  width: 100%;
-  min-height: 90vh;
-  background: linear-gradient(135deg, #96d44f, #1e293b);
+  background-color: var(--ifm-color-primary-darkest);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 1rem;
-  color: white;
-  text-align: center;
+  min-height: 400px;
 }
 
 .heroContent {
-  max-width: 700px;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 3.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .subtitle {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   opacity: 0.8;
-  margin-bottom: 2rem;
+  margin-bottom: 40px;
 }
 
 .button {
-  display: inline-block;
-  padding: 0.9rem 2rem;
-  background: #38bdf8;
-  border-radius: 8px;
-  color: black;
-  font-weight: 600;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 15px 30px;
+  border-radius: var(--ifm-border-radius);
+  font-weight: bold;
   font-size: 1.1rem;
-  transition: 0.3s;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
 }
 
 .button:hover {
-  background: #0ea5e9;
+  background-color: var(--ifm-color-primary-dark);
   color: white;
+  text-decoration: none;
 }
 
+/* --- Section Styling --- */
 .section {
-  padding: 4rem 2rem;
-  text-align: center;
+  padding: 60px 0;
+  background-color: var(--ifm-background-color);
 }
 
 .sectionTitle {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  font-weight: 700;
-  color: #0f172a;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--ifm-font-color-base);
 }
 
+/* --- Cards --- */
 .cards {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  max-width: 1100px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  text-align: left;
-  transition: 0.3s ease;
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 30px;
+  border-radius: var(--ifm-border-radius);
+  box-shadow: var(--ifm-shadow-md);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
 }
 
 .card h3 {
-  margin-bottom: 0.5rem;
-  color: #0f172a;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
+  color: var(--ifm-color-primary);
+  margin-bottom: 15px;
 }
 
 .card p {
-  opacity: 0.8;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+/* --- Chatbot Section --- */
+.chatbotSection {
+  background-color: var(--ifm-background-color);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.chatbotSection h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--ifm-font-color-base);
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  .chatbotSection h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  .chatbotSection h2 {
+    font-size: 1.8rem;
+  }
 }

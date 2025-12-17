@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-github-username.github.io',
+  url: 'https://sameeeena.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/Physical-AI-Book/',
+  baseUrl: '/physical-ai-book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-github-username', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI-Book', // Usually your repo name.
+  organizationName: 'sameeeena', // Usually your GitHub org/user name.
+  projectName: 'physical-ai-book', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -94,6 +94,11 @@ const config = {
             sidebarId: 'bookSidebar',
             position: 'left',
             label: 'Chapters',
+          },
+          {
+            to: '/chat',
+            label: 'Chat',
+            position: 'left',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           {

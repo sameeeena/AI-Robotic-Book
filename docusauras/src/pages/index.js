@@ -2,6 +2,7 @@
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import styles from './home.module.css';
+import Chatbot from '@site/src/components/Chatbot'; // Import the Chatbot component
 
 export default function Home() {
   return (
@@ -38,6 +39,13 @@ export default function Home() {
             <p>Learn how AI answers questions using your book's content.</p>
           </div>
         </div>
+
+        <section className={styles.chatbotSection}>
+            <div className="container">
+                <h2>Ask our AI Chatbot about the book!</h2>
+                <Chatbot />
+            </div>
+        </section>
       </main>
     </Layout>
   );
