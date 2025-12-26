@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+openai
+python-dotenv
+qdrant-client
+requests
+python-frontmatter
+faiss-cpu
+numpy
+psycopg2-binary
+pgvector
+sqlalchemy
+cohere

@@ -1,0 +1,83 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: var(--ifm-background-color); /* Use Docusaurus theme background */
+  box-shadow: var(--ifm-navbar-shadow); /* Use Docusaurus theme shadow */
+}
+
+.chatHistory {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid #eee;
+  background-color: var(--ifm-code-background); /* Lighter background for chat history */
+}
+
+.message {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 70%;
+}
+
+.message.user {
+  background-color: var(--ifm-color-primary-dark); /* Docusaurus primary color */
+  color: white;
+  margin-left: auto;
+  text-align: right;
+}
+
+.message.ai {
+  background-color: var(--ifm-color-emphasis-100); /* Lighter background for AI */
+  color: var(--ifm-font-color-base);
+  margin-right: auto;
+  text-align: left;
+}
+
+
+.chatInput {
+  display: flex;
+  padding: 10px;
+  gap: 10px; /* Space between elements */
+  align-items: center; /* Vertically align items */
+}
+
+.chatInput select,
+.chatInput input {
+  padding: 8px 12px;
+  border: 1px solid var(--ifm-contents-border-color); /* Docusaurus border color */
+  border-radius: var(--ifm-button-border-radius); /* Docusaurus border radius */
+  font-size: 1rem;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+}
+
+.chatInput select {
+  flex-basis: 120px; /* Fixed width for dropdown */
+  min-width: 100px;
+}
+
+.chatInput input {
+  flex-grow: 1;
+}
+
+.chatInput button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: var(--ifm-button-border-radius);
+  background-color: var(--ifm-color-primary); /* Docusaurus primary color */
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.chatInput button:hover {
+  background-color: var(--ifm-color-primary-dark);
+}

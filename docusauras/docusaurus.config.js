@@ -1,4 +1,4 @@
-// @ts-check
+﻿// @ts-check
 // `@type` JSDoc annotations allow editor autocompletion and type checking
 // (when paired with `@ts-check`).
 // There are various equivalent ways to declare your Docusaurus config.
@@ -95,12 +95,11 @@ const config = {
             position: 'left',
             label: 'Chapters',
           },
-          // {
-          //   to: '/chat',
-          //   label: 'Chat',
-          //   position: 'left',
-          // },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            type: 'html',
+            position: 'right',
+            value: '<a class="navbar__item navbar__link" id="chatbot-nav-link" onclick="window.toggleDocusaurusChatbot(event)" style="cursor: pointer;">Chatbot</a>',
+          },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',

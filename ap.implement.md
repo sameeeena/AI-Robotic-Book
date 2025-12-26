@@ -61,9 +61,9 @@ For each chapter (e.g., `chapter-N.md`):
 - **Action**: Initialize the main entry point for the RAG backend.
 - **Details**: Create the file `rag-backend/index.js`.
 
-### 3.2 Add Express
-- **Action**: Set up an Express.js server to handle API requests.
-- **Details**: `npm install express` and configure basic server boilerplate.
+### 3.2 Add Fastapi
+- **Action**: Set up an fastapi server to handle API requests.
+- **Details**: `uv add fastapi` and configure basic server boilerplate.
 
 ### 3.3 Add OpenAI + embeddings
 - **Action**: Integrate OpenAI API for generating embeddings.
@@ -163,3 +163,112 @@ For each chapter (e.g., `chapter-N.md`):
 ### 6.5 Test Deployment
 - **Action**: Verify both the frontend (GitHub Pages) and backend (Vercel/Render) are accessible and functional.
 - **Details**: Check all links, images, and API calls are working correctly in the deployed environment.
+
+########################################################################################
+
+implement.md
+
+Integrated RAG Chatbot Implementation Plan
+
+This document defines the step-by-step implementation roadmap for building and embedding a Retrieval-Augmented Generation (RAG) chatbot inside the Physical AI and Humanoid Robots Docusaurus book.
+
+
+---
+
+1. Objective
+
+Build a production-ready RAG chatbot that:
+
+Answers questions strictly from the book content
+
+Supports answering questions based only on user-selected text
+
+Is embedded inside a Docusaurus site
+
+Uses modern AI infrastructure and best practices
+
+
+
+---
+
+2. System Architecture
+
+Frontend: Docusaurus (Book + Chat UI)
+
+Backend: FastAPI (RAG API)
+
+AI & Data Stack:
+
+OpenAI (Embeddings + Chat / Agent logic)
+
+Qdrant Cloud (Vector Database – Free Tier)
+
+Neon Serverless Postgres (Chat history, metadata)
+
+
+Docusaurus UI
+   ↓ API
+FastAPI Backend
+   ├── OpenAI (LLM + Embeddings)
+   ├── Qdrant (Vector Search)
+   └── Neon Postgres (Chats & Logs)
+
+
+---
+
+3. Backend Project Structure
+
+rag-chatbot/
+├── app/
+│   ├── main.py
+│   ├── api/
+│   │   ├── chat.py
+│   │   └── ingest.py
+│   ├── core/
+│   │   ├── config.py
+│   │   └── openai_client.py
+│   ├── rag/
+│   │   ├── chunker.py
+│   │   ├── embeddings.py
+│   │   ├── retriever.py
+│   │   └── prompt_builder.py
+│   ├── db/
+│   │   ├── postgres.py
+│   │   └── models.py
+│   └── utils/
+│       └── cleaners.py
+├── scripts/
+│   └── ingest_book.py
+├── requirements.txt
+└── .env
+
+
+---
+
+4. Book Ingestion Pipeline
+
+4.1 Input
+
+Docusaurus Markdown files (.md, .mdx)
+
+
+4.2 Cleaning & Preprocessing
+
+Remove navigation/frontmatter noise
+
+Preserve headings and code blocks
+
+
+4.3 Chunking Strategy
+
+Chunk size: 500–800 tokens
+
+Overlap: ~100 tokens
+
+Chunk by headings and paragraphs
+
+
+Each chunk must include metadata:
+
+
+  "book": "Physical AI and Humanoid Robots",
