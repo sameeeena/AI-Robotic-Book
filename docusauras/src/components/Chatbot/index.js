@@ -2,7 +2,7 @@
 import styles from './styles.module.css';
 
 // Allow setting API URL through window object for flexibility in different environments
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:8000';
 
 const Chatbot = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([]);
